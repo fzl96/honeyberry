@@ -24,6 +24,7 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        "foreground-soft": "hsl(var(--foreground-soft))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -59,6 +60,22 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "reveal-from-bottom": {
+          from: { opacity: "0", transform: "translateY(0.75rem)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "reveal-from-top": {
+          from: { opacity: "0", transform: "translateY(-0.75rem)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "reveal-from-left": {
+          from: { opacity: "0", transform: "translateX(-1rem)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        "reveal-from-right": {
+          from: { opacity: "0", transform: "translateX(1rem)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -71,6 +88,12 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "reveal-from-bottom": "reveal-from-bottom ease-out forwards",
+        "reveal-from-top": "reveal-from-top ease-out forwards",
+        "reveal-from-left":
+          "reveal-from-left cubic-bezier(.51,.85,.65,.89) forwards",
+        "reveal-from-right":
+          "reveal-from-right cubic-bezier(.51,.85,.65,.89) forwards",
       },
     },
   },

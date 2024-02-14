@@ -12,12 +12,12 @@ const pacifico = Pacifico({
 
 export function Header() {
   return (
-    <header className="top-0 w-full flex justify-between py-2 items-center mx-auto max-w-[800px] sticky bg-black/0 backdrop-blur-lg">
+    <header className="sticky top-0 mx-auto flex w-full max-w-[800px] items-center justify-between bg-black/0 py-2 backdrop-blur-lg">
       <Link href="/">
         <h1
           className={cn(
             pacifico.className,
-            "scroll-m-20 tracking-tight text-2xl"
+            "scroll-m-20 text-2xl tracking-tight",
           )}
         >
           Honeyberry

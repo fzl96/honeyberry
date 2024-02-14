@@ -19,7 +19,7 @@ export function NavLinks() {
       {links.map((link) => (
         <li
           key={link.name}
-          className="mr-4 relative px-2 py-1"
+          className="relative mr-4 px-2 py-1"
           onMouseEnter={() => setSelectedTab(link.name)}
         >
           {selectedTab === link.name && (
@@ -30,14 +30,14 @@ export function NavLinks() {
                 duration: 0.3,
               }}
               layoutId="underline"
-              className="bg-secondary absolute inset-0 rounded"
+              className="absolute inset-0 rounded bg-secondary"
             />
           )}
 
-          <Link href={link.url} className="relative py-2 z-10">
+          <Link href={link.url} className="relative z-10 py-2">
             {link.url === pathname && (
               <motion.div
-                className="border-b-2 border-foreground absolute inset-0"
+                className="absolute inset-0 border-b-2 border-foreground"
                 layoutId="active-underline"
               />
             )}

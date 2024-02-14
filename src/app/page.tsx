@@ -16,9 +16,9 @@ const pacifico = Pacifico({
 
 export default function Home() {
   return (
-    <main className="max-w-[540px] mx-auto mt-12">
+    <main className="mx-auto mt-12 max-w-[540px]">
       <div className="flex flex-col items-center gap-5">
-        <div className="w-20 h-20 overflow-hidden rounded-full animate-in fade-in slide-in-from-bottom-2 duration-500">
+        <div className="h-20 w-20 overflow-hidden rounded-full duration-500 animate-in fade-in slide-in-from-bottom-2">
           <Image
             src="/Furina-9.png"
             width={540}
@@ -31,19 +31,19 @@ export default function Home() {
           <div className="space-y-1">
             <h1
               className={cn(
-                "scroll-m-20 text-2xl font-semibold tracking-tight animate-in fade-in slide-in-from-bottom-2 duration-700"
+                "scroll-m-20 text-2xl font-semibold tracking-tight duration-700 animate-in fade-in slide-in-from-bottom-2",
                 // pacifico.className
               )}
             >
               Honeyberry
             </h1>
             <div className="h-6 overflow-hidden">
-              <h2 className="scroll-m20 text-lg tracking-tight text-foreground-soft opacity-0 translate-y-3 animate-reveal-from-bottom delay-200 duration-300">
+              <h2 className="scroll-m20 translate-y-3 animate-reveal-from-bottom text-lg tracking-tight text-foreground-soft opacity-0 delay-200 duration-300">
                 The Hydro Archon of Fontaine
               </h2>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-5 translate-y-3 opacity-0 animate-reveal-from-bottom delay-500 duration-300">
+          <div className="flex translate-y-3 animate-reveal-from-bottom items-center justify-center gap-5 opacity-0 delay-500 duration-300">
             {siteConfig.links.map((link) => {
               const Icon = Icons[link.icon || "arrowRight"];
               return (
@@ -54,7 +54,7 @@ export default function Home() {
                   side="bottom"
                 >
                   <a href={link.url} target="_blank">
-                    <Icon className="w-6 h-6 text-muted-foreground hover:text-foreground-soft transition-colors duration-200" />
+                    <Icon className="h-6 w-6 text-muted-foreground transition-colors duration-200 hover:text-foreground-soft" />
                   </a>
                 </ToolTipWrapper>
               );

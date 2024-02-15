@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@/components/analytics";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const pacifico = Pacifico({
@@ -42,8 +42,8 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Analytics />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );

@@ -111,7 +111,7 @@ export function MobileNav() {
                     />
                   </div>
                 ))}
-                <div className="mb-5 mt-auto overflow-hidden">
+                <div className="mt-auto overflow-hidden">
                   <motion.div variants={linkVariants}>
                     <h1 className="font-pacifico text-lg">Honeyberry</h1>
                   </motion.div>

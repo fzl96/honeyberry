@@ -12,7 +12,7 @@ export function MobileNavToggle() {
       <Button
         onClick={() => setOpen(true)}
         variant="ghost"
-        size="icon"
+        size="sm"
         className="text-base"
       >
         Menu

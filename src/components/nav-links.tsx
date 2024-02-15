@@ -15,11 +15,14 @@ export function NavLinks() {
   const pathname = usePathname();
   const [selectedTab, setSelectedTab] = useState<string | null>(null);
   return (
-    <ul className="flex items-center" onMouseLeave={() => setSelectedTab(null)}>
+    <ul
+      className="mr-2 flex items-center gap-3"
+      onMouseLeave={() => setSelectedTab(null)}
+    >
       {links.map((link) => (
         <li
           key={link.name}
-          className="relative mr-4 px-2 py-1"
+          className="relative px-2 py-1"
           onMouseEnter={() => setSelectedTab(link.name)}
         >
           {selectedTab === link.name && (
@@ -34,7 +37,7 @@ export function NavLinks() {
             />
           )}
 
-          <Link href={link.url} className="relative z-10 py-2">
+          <Link href={link.url} className="relative z-10 py-2 text-sm">
             {link.url === pathname && (
               <motion.div
                 className="absolute inset-0 border-b-2 border-foreground"

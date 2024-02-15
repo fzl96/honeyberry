@@ -105,12 +105,8 @@ export function MobileNav() {
                 className="mt-[15rem] flex h-full flex-col items-center justify-center gap-5"
               >
                 {links.map((link) => (
-                  <div className="overflow-hidden">
-                    <MobileNavLink
-                      key={link.url}
-                      href={link.url}
-                      title={link.name}
-                    />
+                  <div className="overflow-hidden" key={link.url}>
+                    <MobileNavLink href={link.url} title={link.name} />
                   </div>
                 ))}
                 <div className="mt-auto overflow-hidden">

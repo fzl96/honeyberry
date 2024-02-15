@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      animationDelay: {
+        "400": "400ms",
+        "600": "600ms",
+        "800": "800ms",
+        "900": "900ms",
+      },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "sans-serif"],
         pacifico: ["var(--font-pacifico)", "Pacifico", "cursive"],

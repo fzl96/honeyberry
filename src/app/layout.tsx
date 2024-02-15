@@ -27,7 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <Analytics />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -44,6 +43,7 @@ export default function RootLayout({
           <Header />
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

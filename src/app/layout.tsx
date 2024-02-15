@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const pacifico = Pacifico({
@@ -26,6 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
+      <Script
+        async
+        src="https://us.umami.is/script.js"
+        data-website-id="3ddd1de2-aa7f-465b-8436-2f455bc3eea7"
+      />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",

@@ -5,22 +5,22 @@ import { cn } from "@/lib/utils";
 
 export function LinkButtons() {
   return (
-    <div className="flex md:flex-row flex-col md:items-center md:gap-5 gap-4 mt-4 w-full md:justify-center px-10">
-      <div className="opacity-0 translate-x-4 animate-reveal-from-left delay-500 duration-500">
+    <div className="mt-4 flex w-full flex-col gap-4 px-10 md:flex-row md:items-center md:justify-center md:gap-5">
+      <div className="translate-x-4 animate-reveal-from-left opacity-0 delay-500 duration-500">
         <Link href="/contact" className={cn(buttonVariants())}>
           Contact me
           <span>
-            <Mail className="w-4 h-4 ml-2" />
+            <Mail className="ml-2 h-4 w-4" />
           </span>
         </Link>
       </div>
       <Button
         variant="secondary"
-        className="opacity-0 -translate-x-4 animate-reveal-from-right delay-500 duration-500"
+        className="-translate-x-4 animate-reveal-from-right opacity-0 delay-500 duration-500"
       >
         Download CV{" "}
         <span>
-          <Copy className="w-4 h-4 ml-2" />
+          <Copy className="ml-2 h-4 w-4" />
         </span>
       </Button>
     </div>

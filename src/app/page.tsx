@@ -1,18 +1,10 @@
-import Link from "next/link";
 import Image from "next/image";
-import { buttonVariants } from "@/components/ui/button";
-import { Pacifico } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site-config";
 import { Icons } from "@/components/icons";
 import { ToolTipWrapper } from "@/components/tooltip-wrapper";
 import { LinkButtons } from "@/components/home/link-buttons";
 
-const pacifico = Pacifico({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
@@ -35,9 +27,9 @@ export default function Home() {
                 // pacifico.className
               )}
             >
-              Honeyberry
+              Furina de Fontaine
             </h1>
-            <div className="h-6 overflow-hidden">
+            <div className="relative z-10 h-6 overflow-hidden">
               <h2 className="scroll-m20 translate-y-3 animate-reveal-from-bottom text-lg tracking-tight text-foreground-soft opacity-0 delay-200 duration-300">
                 The Hydro Archon of Fontaine
               </h2>

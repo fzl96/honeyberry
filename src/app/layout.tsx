@@ -5,7 +5,13 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const pacifico = Pacifico({
+  weight: "400",
+  style: "normal",
+  subsets: ["latin"],
+  variable: "--font-pacifico",
+});
 
 export const metadata: Metadata = {
   title: "Honeyberry",
@@ -22,8 +28,9 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background antialiased",
-          inter.className
+          "min-h-screen bg-background font-sans antialiased",
+          inter.variable,
+          pacifico.variable,
         )}
       >
         <ThemeProvider

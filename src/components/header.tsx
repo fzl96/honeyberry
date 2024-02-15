@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./mode-toggle";
 import Link from "next/link";
+import { NavLinks } from "@/components/nav-links";
+import { MobileNavToggle } from "@/components/mobile-nav-toggle";
 
 export function Header() {
   return (
@@ -10,8 +12,13 @@ export function Header() {
           Honeyberry
         </h1>
       </Link>
-      <nav className="flex items-center gap-3">
-        <NavLinks />
+      <nav className="flex items-center gap-3 md:gap-0">
+        <div className="hidden md:block">
+          <NavLinks />
+        </div>
+        <div className="md:hidden">
+          <MobileNavToggle />
+        </div>
         <ModeToggle />
       </nav>
     </header>

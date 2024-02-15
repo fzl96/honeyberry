@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site-config";
 import { Icons } from "@/components/icons";
 import { ToolTipWrapper } from "@/components/tooltip-wrapper";
 import { LinkButtons } from "@/components/home/link-buttons";
-
+import { MobileNav } from "@/components/mobile-nav";
 
 export default function Home() {
   return (
@@ -55,6 +55,7 @@ export default function Home() {
         </div>
         <LinkButtons />
       </div>
+      <MobileNav />
     </main>
   );
 }

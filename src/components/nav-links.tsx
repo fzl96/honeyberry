@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-const links: { name: string; url: string }[] = [
+export const links: { name: string; url: string }[] = [
   { name: "About", url: "#" },
   { name: "Projects", url: "/projects" },
   { name: "Contact", url: "/contact" },

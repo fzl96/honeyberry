@@ -2,16 +2,14 @@
 
 import { useMenuState } from "@/app/store/menu";
 import { AnimatePresence, motion } from "framer-motion";
-import { links } from "@/components/nav-links";
 import Link from "next/link";
 
-import { Pacifico } from "next/font/google";
-
-const pacifico = Pacifico({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
+const links = [
+  { name: "Home", url: "/" },
+  { name: "About", url: "/about" },
+  { name: "Projects", url: "/projects" },
+  { name: "Contact", url: "/contact" },
+];
 
 export function MobileNav() {
   const open = useMenuState((state) => state.open);
@@ -79,7 +77,7 @@ export function MobileNav() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute left-0 top-0 z-[1000] h-screen w-full origin-top bg-background"
+            className="fixed left-0 top-0 z-[1000] h-[100svh] w-full origin-top bg-background"
           >
             <div className="flex h-full flex-col px-10 py-5">
               <motion.div
@@ -106,10 +104,14 @@ export function MobileNav() {
               >
                 {links.map((link) => (
                   <div className="overflow-hidden" key={link.url}>
-                    <MobileNavLink href={link.url} title={link.name} />
+                    <MobileNavLink
+                      href={link.url}
+                      title={link.name}
+                      setOpen={setOpen}
+                    />
                   </div>
                 ))}
-                <div className="mt-auto overflow-hidden">
+                <div className="mb-5 mt-auto overflow-hidden">
                   <motion.div variants={linkVariants}>
                     <h1 className="font-pacifico text-lg">Honeyberry</h1>
                   </motion.div>
@@ -123,7 +125,15 @@ export function MobileNav() {
   );
 }
 
-function MobileNavLink({ href, title }: { href: string; title: string }) {
+function MobileNavLink({
+  href,
+  title,
+  setOpen,
+}: {
+  href: string;
+  title: string;
+  setOpen: (open: boolean) => void;
+}) {
   const linkVariants = {
     initial: {
       y: "30vh",
@@ -143,7 +153,7 @@ function MobileNavLink({ href, title }: { href: string; title: string }) {
 
   return (
     <motion.div variants={linkVariants}>
-      <Link href={href} className="text-4xl">
+      <Link href={href} className="text-4xl" onClick={() => setOpen(false)}>
         {title}
       </Link>
     </motion.div>

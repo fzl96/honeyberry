@@ -35,7 +35,7 @@ export default function Home() {
               </h2>
             </div>
           </div>
-          <div className="delay-400 flex translate-y-3 animate-reveal-from-bottom items-center justify-center gap-5 opacity-0 duration-300">
+          <div className="flex translate-y-3 animate-reveal-from-bottom items-center justify-center gap-5 opacity-0 duration-300 delay-400">
             {siteConfig.links.map((link) => {
               const Icon = Icons[link.icon || "arrowRight"];
               return (
@@ -55,7 +55,6 @@ export default function Home() {
         </div>
         <LinkButtons />
       </div>
-      <MobileNav />
     </main>
   );
 }

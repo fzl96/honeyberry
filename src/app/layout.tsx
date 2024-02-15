@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@/components/analytics";
-import { MobileNav } from "@/components/mobile-nav";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const pacifico = Pacifico({
@@ -44,7 +44,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Analytics />
-          {/* <MobileNav /> */}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

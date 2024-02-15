@@ -5,10 +5,11 @@ import { Icons } from "@/components/icons";
 import { ToolTipWrapper } from "@/components/tooltip-wrapper";
 import { LinkButtons } from "@/components/home/link-buttons";
 import { MobileNav } from "@/components/mobile-nav";
+import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
 export default function Home() {
   return (
-    <main className="mx-auto mt-12 max-w-[540px]">
+    <MaxWidthWrapper>
       <div className="flex flex-col items-center gap-5">
         <div className="h-20 w-20 overflow-hidden rounded-full duration-500 animate-in fade-in slide-in-from-bottom-2">
           <Image
@@ -24,7 +25,6 @@ export default function Home() {
             <h1
               className={cn(
                 "scroll-m-20 text-2xl font-semibold tracking-tight duration-700 animate-in fade-in slide-in-from-bottom-2",
-                // pacifico.className
               )}
             >
               Furina de Fontaine
@@ -55,6 +55,6 @@ export default function Home() {
         </div>
         <LinkButtons />
       </div>
-    </main>
+    </MaxWidthWrapper>
   );
 }

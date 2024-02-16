@@ -29,6 +29,7 @@ const config = {
         pacifico: ["var(--font-pacifico)", "Pacifico", "cursive"],
       },
       colors: {
+        icon: "hsl(var(--icon))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -5,15 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ContactFormSchema } from "@/lib/validations/contact";
@@ -26,7 +18,6 @@ export function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
-      subject: "",
       message: "",
     },
   });
@@ -59,7 +50,7 @@ export function ContactForm() {
                   <Input
                     placeholder="Name"
                     {...field}
-                    className="bg-secondary py-6"
+                    className="border-none bg-secondary py-6"
                   />
                 </FormControl>
               </FormItem>
@@ -77,7 +68,7 @@ export function ContactForm() {
                     <Input
                       placeholder="email"
                       {...field}
-                      className="bg-secondary py-6"
+                      className="border-none bg-secondary py-6"
                       type="email"
                     />
                   </div>
@@ -89,25 +80,6 @@ export function ContactForm() {
         <div className="md:col-span-2">
           <FormField
             control={form.control}
-            name="subject"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      placeholder="Subject"
-                      {...field}
-                      className="bg-secondary py-6"
-                    />
-                  </FormControl>
-                </FormItem>
-              );
-            }}
-          />
-        </div>
-        <div className="md:col-span-2">
-          <FormField
-            control={form.control}
             name="message"
             render={({ field }) => {
               return (
@@ -116,7 +88,7 @@ export function ContactForm() {
                     <Textarea
                       placeholder="Message"
                       {...field}
-                      className="h-40 max-h-80 bg-secondary"
+                      className="h-40 max-h-80 border-none bg-secondary"
                     />
                   </FormControl>
                 </FormItem>
@@ -125,9 +97,9 @@ export function ContactForm() {
           />
         </div>
         <Button
-          disabled={form.formState.isSubmitting}
+          disabled={form.formState.isSubmitting || !form.formState.isValid}
           type="submit"
-          className="py-6 md:col-span-2"
+          className="py-6 font-semibold md:col-span-2"
         >
           Send
         </Button>

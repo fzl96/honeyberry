@@ -1,9 +1,9 @@
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 
-export default function Projects() {
+export default function About() {
   return (
     <MaxWidthWrapper>
-      <h1>Projects</h1>
+      <div>About</div>
     </MaxWidthWrapper>
   );
 }

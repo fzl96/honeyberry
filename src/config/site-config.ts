@@ -2,33 +2,34 @@ import { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
   name: "Honeyberry",
-  description: "A simple blog starter with Next.js and MDX",
-  url: "https://honeyberry.vercel.app",
-  ogImage: "/og-image.png",
+  description:
+    "Honeyberry is a frontend developer based in Indonesia. He loves to create beautiful and functional websites.",
+  url: "https://honeyberry.me",
+  ogImage: "https://honeyberry.me/og.png",
   links: [
     {
       name: "GitHub",
-      url: "https://github/fzl96",
+      url: "https://github.com/",
       icon: "github",
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/fzl96/",
+      url: "https://www.linkedin.com",
       icon: "linkedin",
     },
     {
       name: "Threads",
-      url: "https://threads.dev/@fzl96",
+      url: "https://threads.dev",
       icon: "threads",
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/fzl96/",
+      url: "https://www.instagram.com",
       icon: "instagram",
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/fzl96",
+      url: "https://twitter.com",
       icon: "twitter",
     },
   ],

@@ -1,10 +1,14 @@
 import { ContactForm } from "@/components/contact/form";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { BiMessageSquare } from "react-icons/bi";
-import { RiWhatsappLine } from "react-icons/ri";
 import { CopyText } from "@/components/copy-text";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 export default function Contact() {
   return (

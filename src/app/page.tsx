@@ -7,6 +7,11 @@ import { LinkButtons } from "@/components/home/link-buttons";
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { HomeSection } from "@/components/home/home-section";
 import { ProjectCard } from "@/components/home/project-card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Homepage | Honeyberry",
+};
 
 export default function Home() {
   return (
@@ -18,6 +23,7 @@ export default function Home() {
             width={540}
             height={540}
             alt="furina"
+            sizes="33vw"
             className="scale-125"
           />
         </div>

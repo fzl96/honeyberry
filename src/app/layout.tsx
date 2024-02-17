@@ -8,6 +8,7 @@ import { Analytics } from "@/components/analytics";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/config/site-config";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const pacifico = Pacifico({
@@ -85,6 +86,7 @@ export default function RootLayout({
           {children}
           <SiteFooter />
           <Analytics />
+          <SpeedInsights />
           <Toaster />
         </ThemeProvider>
       </body>

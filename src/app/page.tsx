@@ -55,30 +55,32 @@ export default function Home() {
           </div>
         </div>
         <LinkButtons />
-        <HomeSection title="About" containerClassName="md:mt-12 mt-8">
-          <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
-            Furina de Fontaine is the{" "}
-            <span className="hover:text-blue-400">Hydro Archon</span> of
-            Fontaine.
-          </p>
-          <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
-            Introduced as the flamboyant and overconfident Hydro Archon,
-            Furina&apos;s theatrics are eventually revealed to be a public
-            persona which she later discards in favor of living a relatively
-            humbler life as an actress and artistic consultant.
-          </p>
-          <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
-            Furina lives for the thrill of the courtroom, often speaking in a
-            manner peppered with bravado and drama.
-          </p>
-        </HomeSection>
-        <HomeSection title="Projects" containerClassName="mt-5">
-          <ProjectCard
-            title="Furina de Fontaine"
-            href="/furina"
-            image="/name-card.png"
-          />
-        </HomeSection>
+        <div className="translate-y-3 animate-reveal-from-bottom opacity-0 delay-700 duration-300">
+          <HomeSection title="About" containerClassName="md:mt-12 mt-8">
+            <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
+              Furina de Fontaine is the{" "}
+              <span className="hover:text-blue-400">Hydro Archon</span> of
+              Fontaine.
+            </p>
+            <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
+              Introduced as the flamboyant and overconfident Hydro Archon,
+              Furina&apos;s theatrics are eventually revealed to be a public
+              persona which she later discards in favor of living a relatively
+              humbler life as an actress and artistic consultant.
+            </p>
+            <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
+              Furina lives for the thrill of the courtroom, often speaking in a
+              manner peppered with bravado and drama.
+            </p>
+          </HomeSection>
+          <HomeSection title="Projects" containerClassName="mt-5">
+            <ProjectCard
+              title="Furina de Fontaine"
+              href="/furina"
+              image="/name-card.png"
+            />
+          </HomeSection>
+        </div>
       </div>
     </MaxWidthWrapper>
   );

@@ -9,6 +9,8 @@
     --foreground-soft: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
+    --card-hover: 0 0% 98%;
+    --card-border: 214.3 31.8% 91.4%;
     --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
@@ -43,7 +45,9 @@
     --foreground: 0 0% 85%;
     --foreground-soft: 0 0% 65%;
 
-    --card: 0 0% 10%;
+    --card: 0 0% 13%;
+    --card-hover: 0 0% 16%;
+    --card-border: 0 0% 18%;
     --card-foreground: 0 0% 85%;
 
     --popover: 0 0% 13%;
@@ -52,7 +56,7 @@
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 0 0% 13%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 0 0% 15%;

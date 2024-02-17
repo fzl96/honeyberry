@@ -4,11 +4,13 @@ import {
   RiLinkedinLine,
   RiThreadsLine,
   RiTwitterLine,
+  RiLink,
 } from "react-icons/ri";
 
 import { ArrowRight } from "lucide-react";
 
 export const Icons = {
+  link: RiLink,
   arrowRight: ArrowRight,
   github: RiGithubLine,
   linkedin: RiLinkedinLine,

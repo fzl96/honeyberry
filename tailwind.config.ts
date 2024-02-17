@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        md: ["15px", "22.5px"],
+      },
       animationDelay: {
         "400": "400ms",
         "600": "600ms",
@@ -62,6 +65,8 @@ const config = {
         },
         card: {
           DEFAULT: "hsl(var(--card))",
+          hover: "hsl(var(--card-hover))",
+          border: "hsl(var(--card-border))",
           foreground: "hsl(var(--card-foreground))",
         },
       },

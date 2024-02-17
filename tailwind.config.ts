@@ -37,6 +37,8 @@ const config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        "nav-background": "hsl(var(--nav-background))",
+        "nav-foreground": "hsl(var(--nav-foreground))",
         foreground: "hsl(var(--foreground))",
         "foreground-soft": "hsl(var(--foreground-soft))",
         primary: {

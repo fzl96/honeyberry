@@ -55,7 +55,7 @@ export default function Home() {
           </div>
         </div>
         <LinkButtons />
-        <div className="translate-y-3 animate-reveal-from-bottom opacity-0 delay-700 duration-300">
+        <div className="translate-y-3 animate-reveal-from-bottom opacity-0 duration-300 delay-800 md:delay-700">
           <HomeSection title="About" containerClassName="md:mt-12 mt-8">
             <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
               Furina de Fontaine is the{" "}

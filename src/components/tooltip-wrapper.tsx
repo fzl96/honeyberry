@@ -9,7 +9,7 @@ export function ToolTipWrapper({
   children,
   content,
   className,
-  side,
+  side = "bottom",
 }: {
   children: React.ReactNode;
   content: string;

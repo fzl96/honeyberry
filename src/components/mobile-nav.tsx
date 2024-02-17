@@ -3,6 +3,7 @@
 import { useMenuState } from "@/app/store/menu";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { useLockBody } from "@/hooks/use-lock-body";
 
 const links = [
   { name: "Home", url: "/" },
@@ -13,8 +14,13 @@ const links = [
 
 export function MobileNav() {
   const open = useMenuState((state) => state.open);
-  const setOpen = useMenuState((state) => state.setOpen);
 
+  return <AnimatePresence>{open && <MobileNavRender />}</AnimatePresence>;
+}
+
+function MobileNavRender() {
+  useLockBody();
+  const setOpen = useMenuState((state) => state.setOpen);
   const menuVariants = {
     initial: {
       scaleY: 0,
@@ -70,57 +76,53 @@ export function MobileNav() {
   };
   return (
     <>
-      <AnimatePresence>
-        {open && (
+      <motion.div
+        variants={menuVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="bg-nav-background text-nav-foreground fixed left-0 top-0 z-[1000] h-[100dvh] w-full origin-top"
+      >
+        <div className="flex h-full flex-col px-10 py-5">
           <motion.div
-            variants={menuVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="fixed left-0 top-0 z-[1000] h-[100svh] w-full origin-top bg-background"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex justify-between"
           >
-            <div className="flex h-full flex-col px-10 py-5">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="flex justify-between"
-              >
-                <h1 className="text-xl">Portfolio</h1>
-                <p
-                  className="text-md cursor-pointer"
-                  onClick={() => setOpen(false)}
-                >
-                  Close
-                </p>
-              </motion.div>
-              <motion.div
-                variants={linkContainerVariants}
-                initial="initial"
-                animate="open"
-                exit="initial"
-                className="mt-[15rem] flex h-full flex-col items-center justify-center gap-5"
-              >
-                {links.map((link) => (
-                  <div className="overflow-hidden" key={link.url}>
-                    <MobileNavLink
-                      href={link.url}
-                      title={link.name}
-                      setOpen={setOpen}
-                    />
-                  </div>
-                ))}
-                <div className="mt-auto overflow-hidden">
-                  <motion.div variants={linkVariants}>
-                    <h1 className="font-pacifico text-lg">Honeyberry</h1>
-                  </motion.div>
-                </div>
+            <h1 className="text-xl">Portfolio</h1>
+            <p
+              className="cursor-pointer text-md"
+              onClick={() => setOpen(false)}
+            >
+              Close
+            </p>
+          </motion.div>
+          <motion.div
+            variants={linkContainerVariants}
+            initial="initial"
+            animate="open"
+            exit="initial"
+            className="mt-[15rem] flex h-full flex-col items-center justify-center gap-5"
+          >
+            {links.map((link) => (
+              <div className="overflow-hidden" key={link.url}>
+                <MobileNavLink
+                  href={link.url}
+                  title={link.name}
+                  setOpen={setOpen}
+                />
+              </div>
+            ))}
+            <div className="mt-auto overflow-hidden">
+              <motion.div variants={linkVariants}>
+                <h1 className="font-pacifico text-lg">Honeyberry</h1>
               </motion.div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
+        </div>
+      </motion.div>
     </>
   );
 }

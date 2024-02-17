@@ -63,9 +63,9 @@ export default function Home() {
           </p>
           <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
             Introduced as the flamboyant and overconfident Hydro Archon,
-            Furina's theatrics are eventually revealed to be a public persona
-            which she later discards in favor of living a relatively humbler
-            life as an actress and artistic consultant.
+            Furina&apos;s theatrics are eventually revealed to be a public
+            persona which she later discards in favor of living a relatively
+            humbler life as an actress and artistic consultant.
           </p>
           <p className="text-md leading-6 text-foreground-soft [&:not(:first-child)]:mt-5">
             Furina lives for the thrill of the courtroom, often speaking in a

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "@/components/icons";
+import { ToolTipWrapper } from "../tooltip-wrapper";
 
 interface ProjectCardProps {
   title: string;
@@ -13,8 +14,12 @@ export function ProjectCard({ title, href, image }: ProjectCardProps) {
     <Link href={href}>
       <div className="rounded-xl border border-card-border bg-card p-2 shadow-sm transition-colors duration-300 hover:bg-card-hover">
         <div className="mb-3 mt-1 flex items-center gap-2">
-          <Icons.link className="h-5 w-5 text-icon" />
-          <Icons.github className="h-5 w-5 text-icon" />
+          <ToolTipWrapper content="Visit link" side="bottom">
+            <Icons.link className="h-5 w-5 text-icon" />
+          </ToolTipWrapper>
+          <ToolTipWrapper content="Github repo" side="bottom">
+            <Icons.github className="h-5 w-5 text-icon" />
+          </ToolTipWrapper>
           <p className="text-md font-medium tracking-tight">{title}</p>
         </div>
         <div className="relative aspect-video">

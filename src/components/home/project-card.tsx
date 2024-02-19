@@ -15,10 +15,10 @@ export function ProjectCard({ title, href, image }: ProjectCardProps) {
       <div className="rounded-xl border border-card-border bg-card p-2 shadow-sm transition-colors duration-300 hover:bg-card-hover">
         <div className="mb-3 mt-1 flex items-center gap-2">
           <ToolTipWrapper content="Visit link" side="bottom">
-            <Icons.link className="h-5 w-5 text-icon" />
+            <Icons.link className="h-5 w-5 text-muted-foreground transition-colors duration-200 hover:text-foreground-soft" />
           </ToolTipWrapper>
           <ToolTipWrapper content="Github repo" side="bottom">
-            <Icons.github className="h-5 w-5 text-icon" />
+            <Icons.github className="h-5 w-5 text-muted-foreground transition-colors duration-200 hover:text-foreground-soft" />
           </ToolTipWrapper>
           <p className="text-md font-medium tracking-tight">{title}</p>
         </div>

@@ -21,8 +21,10 @@ export function ExperienceEducationCard({
           <p className="text-sm font-medium tracking-tight text-foreground-soft">
             {title}
           </p>
-          <p className="text font-medium">{location}</p>
-          <p className="text-sm text-foreground-soft">{date}</p>
+          <div className="flex items-center gap-2">
+            <p className="text font-medium">{location}</p>
+            <p className="text-sm text-foreground-soft">{date}</p>
+          </div>
         </div>
         <p className="text-sm">{description}</p>
       </div>

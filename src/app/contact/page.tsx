@@ -28,7 +28,7 @@ export default function Contact() {
           <CopyText value="fpsdragon111@gmail.com">Email</CopyText>
           <a
             className={cn(buttonVariants({ variant: "secondary" }), "w-28")}
-            href="https://wa.me/6285155255898"
+            href="https://wa.me/"
             target="_blank"
           >
             WA me

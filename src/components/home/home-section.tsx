@@ -14,7 +14,7 @@ export function HomeSection({
   contentContainerClassName,
 }: HomeSectionProps) {
   return (
-    <section className={cn("container space-y-2", containerClassName)}>
+    <section className={cn("container space-y-2 md:px-0", containerClassName)}>
       <p className="font-semibold leading-7">{title}</p>
       <div className={cn(contentContainerClassName)}>{children}</div>
     </section>

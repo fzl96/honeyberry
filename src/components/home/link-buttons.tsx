@@ -26,7 +26,7 @@ export function LinkButtons() {
         variant="secondary"
         className="-translate-y-3 animate-reveal-from-bottom opacity-0 delay-700 duration-500 md:hidden"
       >
-        Download CV{" "}
+        Download resume{" "}
         <span>
           <Copy className="ml-2 h-4 w-4 text-icon" />
         </span>
@@ -35,7 +35,7 @@ export function LinkButtons() {
         variant="secondary"
         className="mr-5 hidden w-full translate-x-4 animate-reveal-from-right opacity-0 duration-500 delay-400 md:flex"
       >
-        Download CV{" "}
+        Download resume{" "}
         <span>
           <Copy className="ml-2 h-4 w-4 text-icon" />
         </span>

@@ -31,7 +31,7 @@ export default function About() {
               className="rounded-xl object-cover"
             />
           </div>
-          <p className="text-md leading-6 text-foreground [&:not(:first-child)]:mt-5">
+          <p className="text-md leading-6 text-foreground md:text-base md:leading-7 [&:not(:first-child)]:mt-5">
             Furina has fair skin and heterochromic eyes with her right eye
             having a light blue iris and deep blue droplet-shaped pupil, while
             her left reverses the color scheme. She has mostly grayish-white

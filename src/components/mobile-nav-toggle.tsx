@@ -2,7 +2,7 @@
 
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
-import { useMenuState } from "@/app/store/menu";
+import { useMenuState } from "@/store/menu";
 
 export function MobileNavToggle() {
   const setOpen = useMenuState((state) => state.setOpen);

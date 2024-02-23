@@ -1,6 +1,6 @@
 "use client";
 
-import { useMenuState } from "@/app/store/menu";
+import { useMenuState } from "@/store/menu";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useLockBody } from "@/hooks/use-lock-body";
@@ -81,7 +81,7 @@ function MobileNavRender() {
         initial="initial"
         animate="animate"
         exit="exit"
-        className="bg-nav-background text-nav-foreground fixed left-0 top-0 z-[1000] h-[100dvh] w-full origin-top"
+        className="fixed left-0 top-0 z-[1000] h-[100dvh] w-full origin-top bg-nav-background text-nav-foreground"
       >
         <div className="flex h-full flex-col px-10 py-5">
           <motion.div

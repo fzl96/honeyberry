@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <MaxWidthWrapper>
     <MaxWidthWrapper className="max-w-[768px]">
       <div className="flex flex-col items-center justify-center">
         <h1
@@ -116,6 +115,19 @@ export default function Home() {
             location="Fontaine"
             description="Graduated with a degree in Law and Arts from the University of Fontaine"
           />
+        </HomeSection>
+
+        {/* Contact */}
+        <HomeSection
+          id="contact"
+          containerClassName="mt-7"
+          title="Contact"
+          contentContainerClassName="space-y-3"
+        >
+          <p className="text-md leading-6 text-foreground-soft md:text-base">
+            If you have any inquiries or would like to work with Furina, feel
+            free to reach out to her.
+          </p>
         </HomeSection>
       </div>
     </MaxWidthWrapper>

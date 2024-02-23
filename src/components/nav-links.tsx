@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 export const links: { name: string; url: string }[] = [
   { name: "About", url: "/about" },
   { name: "Projects", url: "/projects" },
-  { name: "Contact", url: "/contact" },
+  { name: "Contact", url: "/#contact" },
 ];
 
 export function NavLinks() {

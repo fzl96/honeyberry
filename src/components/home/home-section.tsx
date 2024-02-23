@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-interface HomeSectionProps {
+interface HomeSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   children: React.ReactNode;
   containerClassName?: string;
@@ -12,11 +12,20 @@ export function HomeSection({
   children,
   containerClassName,
   contentContainerClassName,
+  ...props
 }: HomeSectionProps) {
   return (
-    <section className={cn("container space-y-2 md:px-0", containerClassName)}>
-      <p className="font-semibold leading-7">{title}</p>
-      <div className={cn(contentContainerClassName)}>{children}</div>
-    </section>
+    <div
+      {...props}
+      className={cn(
+        "container grid gap-3 md:grid-cols-5 md:gap-10",
+        containerClassName,
+      )}
+    >
+      <p className="font-semibold leading-7 md:text-right">{title}</p>
+      <div className={cn(contentContainerClassName, "col-span-4")}>
+        {children}
+      </div>
+    </div>
   );
 }

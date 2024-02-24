@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <MaxWidthWrapper className="max-w-[768px]">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center md:my-20">
         <h1
           className={cn(
             "scroll-m-20 text-2xl font-semibold tracking-tight duration-700 animate-in fade-in slide-in-from-bottom-2 md:text-3xl",

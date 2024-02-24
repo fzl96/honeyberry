@@ -22,7 +22,9 @@ export function HomeSection({
         containerClassName,
       )}
     >
-      <p className="font-semibold leading-7 md:text-right">{title}</p>
+      <p className="text-base font-semibold leading-7 md:text-right md:text-md">
+        {title}
+      </p>
       <div className={cn(contentContainerClassName, "col-span-4")}>
         {children}
       </div>

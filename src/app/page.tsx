@@ -124,10 +124,26 @@ export default function Home() {
           title="Contact"
           contentContainerClassName="space-y-3"
         >
-          <p className="text-md leading-6 text-foreground-soft md:text-base">
-            If you have any inquiries or would like to work with Furina, feel
-            free to reach out to her.
-          </p>
+          <ul>
+            <li className="text-md">
+              Email: {` `}
+              <a
+                href="mailto:fpsdragon111@gmail.com"
+                className="border-b text-icon transition-colors duration-300 hover:text-foreground"
+              >
+                fpsdragon111@gmail.com
+              </a>
+            </li>
+            <li className="text-md">
+              LinkedIn:{` `}
+              <a
+                href="https://linkedin.com"
+                className="border-b text-icon transition-colors duration-300 hover:text-foreground"
+              >
+                connect
+              </a>
+            </li>
+          </ul>
         </HomeSection>
       </div>
     </MaxWidthWrapper>

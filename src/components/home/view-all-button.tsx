@@ -13,7 +13,7 @@ export function ViewAll({ href }: ViewAllProps) {
       href={href}
       passHref
       className={cn(
-        buttonVariants({ variant: "secondary" }),
+        buttonVariants({ variant: "outline" }),
         "w-full font-normal transition-all duration-200 hover:brightness-125",
       )}
     >

@@ -67,7 +67,7 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased selection:bg-foreground selection:text-background",
           inter.variable,
           pacifico.variable,
         )}

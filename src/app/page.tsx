@@ -8,6 +8,7 @@ import { ProjectCard } from "@/components/home/project-card";
 import { Metadata } from "next";
 import { ViewAll } from "@/components/home/view-all-button";
 import { ExperienceEducationCard } from "@/components/home/experience-education-card";
+import { projects } from "@/config/projects";
 
 export const metadata: Metadata = {
   title: "Homepage | Honeyberry",
@@ -22,11 +23,11 @@ export default function Home() {
             "scroll-m-20 text-2xl font-semibold tracking-tight duration-700 animate-in fade-in slide-in-from-bottom-2 md:text-3xl",
           )}
         >
-          Furina de Fontaine
+          M. Fazlie
         </h1>
         <div className="relative z-10 h-6 overflow-hidden">
           <h2 className="scroll-m20 translate-y-3 animate-reveal-from-bottom text-base tracking-tight text-foreground-soft opacity-0 delay-200 duration-300 md:text-lg">
-            The Hydro Archon of Fontaine
+            Front End Web Developer
           </h2>
         </div>
         <div className="mt-3 flex translate-y-3 animate-reveal-from-bottom items-center gap-5 text-center opacity-0 duration-300 delay-400">
@@ -49,35 +50,37 @@ export default function Home() {
       </div>
       <div className="translate-y-3 animate-reveal-from-bottom opacity-0 duration-300 delay-800 md:delay-700">
         {/* About Section*/}
-        <HomeSection title="About" containerClassName="mt-8">
-          <p className="text-md leading-6 text-foreground-soft md:text-base [&:not(:first-child)]:mt-5">
-            Furina de Fontaine is the{" "}
-            <span className="hover:text-blue-400">Hydro Archon</span> of
-            Fontaine.
+        <HomeSection
+          title="About"
+          containerClassName="mt-8"
+          contentContainerClassName="text-md leading-6 text-foreground-soft md:text-base space-y-5"
+        >
+          <p>
+            Hi, I&apos;m Fazlie, a frontend web developer based in Indonesia
           </p>
-          <p className="text-md leading-6 text-foreground-soft md:text-base [&:not(:first-child)]:mt-5">
-            Introduced as the flamboyant and overconfident Hydro Archon,
-            Furina&apos;s theatrics are eventually revealed to be a public
-            persona which she later discards in favor of living a relatively
-            humbler life as an actress and artistic consultant.
+          <p>
+            I specialize in frontend web development while also possessing
+            substantial expertise in backend development. This dual proficiency
+            allows me to craft immersive and user-friendly experiences on the
+            frontend while ensuring robust functionality on the backend
           </p>
-          <p className="text-md leading-6 text-foreground-soft md:text-base [&:not(:first-child)]:mt-5">
-            Furina lives for the thrill of the courtroom, often speaking in a
-            manner peppered with bravado and drama.
-          </p>
+          <p></p>
         </HomeSection>
 
         {/* Projects Section */}
         <HomeSection
           title="Projects"
           containerClassName="mt-7"
-          contentContainerClassName="space-y-5"
+          contentContainerClassName="flex flex-col gap-5"
         >
-          <ProjectCard
-            title="Furina de Fontaine"
-            href="/furina"
-            image="/name-card.png"
-          />
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.name}
+              title={project.name}
+              href="/#"
+              image={project.img}
+            />
+          ))}
           <ViewAll href="/projects" />
         </HomeSection>
 
@@ -110,10 +113,10 @@ export default function Home() {
         {/* Education Section */}
         <HomeSection containerClassName="mt-7" title="Education">
           <ExperienceEducationCard
-            title="Bachelor of Law and Arts"
-            date="1100 - 1150"
-            location="Fontaine"
-            description="Graduated with a degree in Law and Arts from the University of Fontaine"
+            title="Bachelor of Engineering"
+            date="2019 - 2023"
+            location="University of Riau"
+            description="Graduated with a Bachelor of Engineering degree in Informatics Engineering"
           />
         </HomeSection>
 
@@ -131,13 +134,13 @@ export default function Home() {
                 href="mailto:fpsdragon111@gmail.com"
                 className="border-b text-icon transition-colors duration-300 hover:text-foreground"
               >
-                fpsdragon111@gmail.com
+                mfzl3927@gmail.com
               </a>
             </li>
             <li className="text-md">
               LinkedIn:{` `}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/muhammad-fazlie-a52469233/"
                 className="border-b text-icon transition-colors duration-300 hover:text-foreground"
               >
                 connect

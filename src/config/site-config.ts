@@ -9,12 +9,12 @@ export const siteConfig: SiteConfig = {
   links: [
     {
       name: "GitHub",
-      url: "https://github.com/",
+      url: "https://github.com/fzl96",
       icon: "github",
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com",
+      url: "https://www.linkedin.com/in/muhammad-fazlie-a52469233/",
       icon: "linkedin",
     },
     {

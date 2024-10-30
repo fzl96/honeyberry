@@ -132,7 +132,7 @@ export default function Home() {
               Email: {` `}
               <a
                 href="mailto:fpsdragon111@gmail.com"
-                className="border-b text-icon transition-colors duration-300 hover:text-foreground"
+                className="border-b border-icon text-icon transition-colors duration-300 hover:border-foreground hover:text-foreground"
               >
                 mfzl3927@gmail.com
               </a>
@@ -141,7 +141,7 @@ export default function Home() {
               LinkedIn:{` `}
               <a
                 href="https://www.linkedin.com/in/muhammad-fazlie-a52469233/"
-                className="border-b text-icon transition-colors duration-300 hover:text-foreground"
+                className="border-b border-icon text-icon transition-colors duration-300 hover:border-foreground hover:text-foreground"
               >
                 connect
               </a>

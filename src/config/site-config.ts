@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       name: "Threads",
-      url: "https://threads.dev",
+      url: "https://threads.net",
       icon: "threads",
     },
     {

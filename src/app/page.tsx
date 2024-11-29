@@ -114,7 +114,7 @@ export default function Home() {
         <HomeSection containerClassName="mt-7" title="Education">
           <ExperienceEducationCard
             title="Bachelor of Engineering"
-            date="2019 - 2023"
+            date=""
             location="University of Riau"
             description="Graduated with a Bachelor of Engineering degree in Informatics Engineering"
           />

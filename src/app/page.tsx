@@ -77,7 +77,7 @@ export default function Home() {
             <ProjectCard
               key={project.name}
               title={project.name}
-              href="/#"
+              href={project.url}
               image={project.img}
             />
           ))}
